@@ -44,14 +44,10 @@ export const RewardModal: React.FC<RewardModalProps> = ({
           {isNewDiscovery ? 'DISCOVERED' : 'STAR INFO'}
         </h2>
 
-        {isNewDiscovery && (
-          <div className="flex items-center gap-2 text-blue-400 text-[10px] mb-8 bg-blue-500/10 px-4 py-1.5 rounded-full border border-blue-400/20">
-            <Check size={12} className="stroke-[4]" />
-            <span className="truncate max-w-[180px] font-black uppercase tracking-widest">{taskTitle}</span>
-          </div>
-        )}
-
-        {!isNewDiscovery && <div className="mb-8 text-white/30 text-[10px] font-black tracking-widest uppercase">COLLECTION</div>}
+        <div className="flex items-center gap-2 text-blue-400 text-[10px] mb-8 bg-blue-500/10 px-4 py-1.5 rounded-full border border-blue-400/20">
+          <Check size={12} className="stroke-[4]" />
+          <span className="truncate max-w-[180px] font-black uppercase tracking-widest">{taskTitle || 'UNKNOWN MISSION'}</span>
+        </div>
 
         <div className="relative w-full aspect-square mb-8 flex items-center justify-center overflow-hidden">
           {/* 背後グロー: 透過エッジを馴染ませる */}

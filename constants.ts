@@ -1,25 +1,29 @@
 import { Star, Category } from './types';
 
 // Common
-const img5051 = '/star-images/IMG_5051.png'; // s1
-const img5049 = '/star-images/IMG_5049.png'; // s2
-const img5146 = '/star-images/IMG_5146.png'; // s3, s12
-const img5030 = '/star-images/IMG_5030.png'; // s4
-const img5029 = '/star-images/IMG_5029.png'; // s5
-const img5027 = '/star-images/IMG_5027.png'; // s6
-const img5026 = '/star-images/IMG_5026.png'; // s7
-const img5148 = '/star-images/IMG_5148.png'; // s8
-const img5168 = '/star-images/IMG_5168.png'; // s9, s11
+const img5051 = 'star-images/IMG_5051.png'; // s1
+const img5049 = 'star-images/IMG_5049.png'; // s2
+const img5146 = 'star-images/IMG_5146.png'; // s3, s12
+const img5030 = 'star-images/IMG_5030.png'; // s4
+const img5029 = 'star-images/IMG_5029.png'; // s5
+const img5027 = 'star-images/IMG_5027.png'; // s6
+const img5043 = 'star-images/IMG_5043.png'; // s7 (New)
+
+// ... (existing definitions)
+
+
+const img5148 = 'star-images/IMG_5148.png'; // s8
+const img5168 = 'star-images/IMG_5168.png'; // s9, s11
 
 // Rare
-const img5045 = '/star-images/IMG_5045.png'; // s10
-const img5033 = '/star-images/IMG_5033.png'; // s13
-const img5023 = '/star-images/IMG_5023.png'; // s14
-const img5022 = '/star-images/IMG_5022.png'; // s15
+const img5045 = 'star-images/IMG_5045.png'; // s10
+const img5033 = 'star-images/IMG_5033.png'; // s13
+const img5023 = 'star-images/IMG_5023.png'; // s14
+const img5022 = 'star-images/IMG_5022.png'; // s15
 
 // Legendary
-const img5024 = '/star-images/IMG_5024.png'; // s16
-const img5032 = '/star-images/IMG_5032.png'; // s17
+const img5024 = 'star-images/IMG_5024.png'; // s16
+const img5032 = 'star-images/IMG_5032.png'; // s17
 
 export const STAR_DATABASE: Star[] = [
   // 星1 (Common) - 9個 (No.1 - No.9)
@@ -69,7 +73,7 @@ export const STAR_DATABASE: Star[] = [
     id: 's7',
     name: 'No.7',
     description: '',
-    imageUrl: img5026,
+    imageUrl: img5043,
     rarity: 'common',
   },
   {

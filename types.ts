@@ -8,6 +8,7 @@ export interface Star {
 
 export interface CollectedStar extends Star {
   categoryId: string; // どのセクターで発見されたか
+  obtainedTaskTitle?: string; // どのタスクで入手したか
 }
 
 export interface Task {

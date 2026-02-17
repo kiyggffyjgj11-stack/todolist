@@ -193,7 +193,7 @@ const App: React.FC = () => {
       const discovered = possibleStars[Math.floor(Math.random() * possibleStars.length)];
       const isFirstTime = !collectedStars.some(s => s.id === discovered.id);
 
-      setCollectedStars(prev => [...prev, { ...discovered, categoryId: task.category }]);
+      setCollectedStars(prev => [...prev, { ...discovered, categoryId: task.category, obtainedTaskTitle: task.title }]);
       setCompletedHistory(prev => [...prev, { ...task, completed: true, completedAt: new Date() }]);
 
       setJustDiscoveredStar(discovered);
@@ -259,7 +259,7 @@ const App: React.FC = () => {
             transform: `translate(${offsetX}px, ${offsetY}px) scale(${0.85 + (hash % 15) * 0.01})`,
             minHeight: window.innerWidth < 640 ? '180px' : '200px'
           }}
-          onClick={() => (setJustDiscoveredStar(star), setIsNewDiscovery(false), setCompletedTaskTitle(''), setIsModalOpen(true))}
+          onClick={() => (setJustDiscoveredStar(star), setIsNewDiscovery(false), setCompletedTaskTitle(star.obtainedTaskTitle || ''), setIsModalOpen(true))}
         >
           <div className="relative flex flex-col items-center w-full h-full max-w-[180px] sm:max-w-[180px] aspect-square">
             <div className="absolute inset-0 bg-blue-500/10 blur-[40px] rounded-full group-hover:bg-blue-400/20 transition-all duration-700 scale-125"></div>
@@ -279,7 +279,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="relative h-screen w-full flex flex-col bg-slate-950 overflow-hidden select-none items-center text-white">
+    <div className="relative h-[100dvh] w-full flex flex-col bg-slate-950 overflow-hidden select-none items-center text-white">
 
       {!isStarted && <StartScreen onStart={() => setIsStarted(true)} />}
 
@@ -337,8 +337,8 @@ const App: React.FC = () => {
       </div>
 
       {/* 宇宙空間 */}
-      <div className="flex-1 relative w-full overflow-y-scroll overflow-x-hidden custom-scrollbar z-10 px-4 sm:px-12 flex justify-center">
-        <div className="min-h-full pb-96 pt-28 sm:pt-36 w-full max-w-7xl">
+      <div className="flex-1 relative w-full overflow-y-auto overflow-x-hidden custom-scrollbar z-10 px-4 sm:px-12 flex justify-center -webkit-overflow-scrolling-touch">
+        <div className="min-h-[101%] pb-96 pt-28 sm:pt-36 w-full max-w-7xl">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-4 sm:gap-y-12 gap-x-4">
             {renderStarField(activeSectorStars)}
           </div>
