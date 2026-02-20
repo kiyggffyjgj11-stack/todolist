@@ -8,12 +8,12 @@ const img5030 = 'star-images/IMG_5030.png'; // s4
 const img5029 = 'star-images/IMG_5029.png'; // s5
 const img5027 = 'star-images/IMG_5027.png'; // s6
 const img5043 = 'star-images/IMG_5043.png'; // s7 (New)
+const img5026 = 'star-images/IMG_5026.png'; // s12 (New - resolved duplication)
 
 // ... (existing definitions)
 
 
 const img5148 = 'star-images/IMG_5148.png'; // s8
-const img5168 = 'star-images/IMG_5168.png'; // s9, s11
 
 // Rare
 const img5045 = 'star-images/IMG_5045.png'; // s10
@@ -83,14 +83,9 @@ export const STAR_DATABASE: Star[] = [
     imageUrl: img5148,
     rarity: 'common',
   },
-  {
-    id: 's9',
-    name: 'No.9',
-    description: '無数の隕石が衝突した跡がある衛星。',
-    imageUrl: img5168,
-    rarity: 'common',
-  },
-  // 星2 (Rare) - 6個 (No.10 - No.15)
+  // s9 (No.9) Removed due to missing image (IMG_5168)
+
+  // 星2 (Rare) - 5個 (No.10, 12, 13, 14, 15)
   {
     id: 's10',
     name: 'No.10',
@@ -98,18 +93,13 @@ export const STAR_DATABASE: Star[] = [
     imageUrl: img5045,
     rarity: 'rare',
   },
-  {
-    id: 's11',
-    name: 'No.11',
-    description: '七色に輝くプリズムのような月。',
-    imageUrl: img5168,
-    rarity: 'rare',
-  },
+  // s11 (No.11) Removed due to missing image (IMG_5168)
+
   {
     id: 's12',
     name: 'No.12',
     description: '氷の尾を引いて駆け抜ける彗星。',
-    imageUrl: img5146,
+    imageUrl: img5026,
     rarity: 'rare',
   },
   {
